@@ -1,0 +1,356 @@
+/* General Styles */
+* {}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #00d1ff;
+}
+
+/* Quiz Area */
+#quizArea {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#quizQuestionContainer {
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 5px;
+    min-height: 6rem;
+    word-wrap: break-word;
+    margin-bottom: 1rem;
+}
+
+#quizUserInput {
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    padding: 0.5rem;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.quizButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.mainButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.secondaryButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.quizButtons button {
+    flex: 1 1 calc(20% - 0.5rem);
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+}
+
+.quizButtons button:hover {
+    background-color: #005bb5;
+}
+
+/* Quiz Buttons */
+.quizButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.mainButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.secondaryButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+/* Button Styling */
+.quizButtons button {
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+    /* Equal width for buttons */
+}
+
+.quizButtons button:hover {
+    background-color: #005bb5;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .mainButtons {
+        flex: 1 1 100%;
+        /* Take full width */
+        justify-content: space-around;
+    }
+
+    .secondaryButtons {
+        flex: 1 1 100%;
+        /* Stack below */
+        justify-content: space-around;
+    }
+
+    .quizButtons button {
+        padding: 0.5rem;
+        /* Reduce padding */
+        font-size: 0.85rem;
+        /* Smaller font for mobile */
+    }
+}
+
+/* Feedback Area */
+#quizFeedbackArea {
+    width: 90%;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    padding: 0.5rem;
+    background-color: #252525;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    text-align: center;
+}
+
+/* Controls */
+#quizControls {
+    width: 90%;
+    max-width: 700px;
+    margin: 1rem auto;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+#quizControls[open] {
+    border-color: #0078d7;
+}
+
+#quizControls summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #00d1ff;
+    font-size: 1.5rem;
+}
+
+#quizControls div {
+    margin-bottom: 1rem;
+}
+
+.checkbox-options h1 {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quizButtons button {
+        flex: 1 1 100%;
+    }
+}
+
+
+footer a {
+    color: #00d1ff;
+    text-decoration: none;
+}
+
+/* DEEPSEEK UPDATE */
+
+/* Additional CSS for Improved Styling */
+
+h1 {
+    font-size: 3.5rem; /* Make the title bigger */
+    margin: 1.5rem 0; /* Add more spacing around the title */
+}
+
+/* Quiz Area Improvements */
+#quizArea {
+    padding: 1.5rem; /* Increase padding for better spacing */
+}
+
+#quizQuestionContainer {
+    font-size: 1.5rem; /* Increase font size for questions */
+    padding: 1.5rem; /* More padding for better readability */
+}
+
+#quizUserInput {
+    font-size: 0.8rem; /* Increase font size for input */
+    padding: 0.75rem; /* More padding for better touch interaction */
+    margin-bottom: 1rem;
+}
+
+/* Button Improvements */
+.quizButtons button {
+    font-size: 1rem; /* Increase button font size */
+    padding: 1rem 1.5rem; /* Larger buttons for better clickability */
+}
+
+/* Dropdown and File Input Styling */
+select, input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type=file], input[type=number], #filterList {
+	width: 98%;
+}
+
+select:hover, input:hover {
+    background-color: #555;
+    border-color: #0078d7;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #00d1ff;
+    background-color: #555;
+}
+
+/* Custom File Input Styling */
+input {
+    padding: 0.5rem;
+}
+
+input::file-selector-button {
+    padding: 0.5rem 1rem;
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input::file-selector-button:hover {
+    background-color: #005bb5;
+}
+
+/* Checkbox and Label Styling */
+.checkbox-container {
+    margin-bottom: 0.75rem;
+}
+
+.checkbox-container label {
+    font-size: 1rem; /* Increase label font size */
+    margin-left: 0.5rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+/* Options Section Styling */
+#quizControls {
+    padding: 1.5rem; /* Increase padding for better spacing */
+}
+
+#quizControls summary {
+    font-size: 1.5rem; /* Increase summary font size */
+    margin-bottom: 1rem; /* Add spacing below the summary */
+}
+
+#quizControls div {
+    margin-bottom: 1.5rem; /* Increase spacing between options */
+}
+
+#quizStartBtn {
+	  width: 100%;
+	  font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    background-color: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+		margin-right: 100%;
+}
+
+/* Feedback Area Styling */
+#quizFeedbackArea {
+    font-size: 0.9rem; 
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller title on mobile */
+    }
+
+    .quizButtons button {
+        padding: 0.75rem 1rem; /* Slightly smaller buttons on mobile */
+        font-size: 0.9rem;
+    }
+
+    #quizUserInput {
+        font-size: 1rem; /* Slightly smaller font for input on mobile */
+    }
+}
+
+#answer {
+  font-size: 0.8rem;
+}

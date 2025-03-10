@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quizer</title>
+
+    <link rel="icon" href="favicon.png">
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/quiz.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <main>
+        <h1>Quizer</h1>
+        <section id="quizArea">
+            <div id="quizQuestionContainer" class="questionContainer"></div>
+            <section id="quizFeedbackArea">
+                <p id="score"></p>
+            </section>
+            <textarea id="quizUserInput" rows="5" cols="33" placeholder="Type your answer here..." accesskey="f"></textarea>
+            <div class="quizButtons">
+                <div class="mainButtons">
+                    <button id="quizPreviousBtn" accesskey="p">Previous</button>
+                    <button id="quizAnswerBtn" accesskey="a">Answer</button>
+                    <button id="quizNextBtn" accesskey="n">Next</button>
+                </div>
+                <div class="secondaryButtons">
+                    <button id="quizSayBtn" accesskey="s">Say</button>
+                    <button id="quizTTSBtn" accesskey="t">TTS</button>
+                    <button id="quizScrollBtn">Scroll</button>
+                </div>
+            </div>
+        </section>
+        <details id="quizControls" open>
+            <summary>Options</summary>
+            <div>
+				<select id="predefinedFiles">
+					<option value="" disabled selected>Language Options</option>
+          <optgroup label="Modern Languages">
+					  <option value="../data/languages/lv-02-spanish.md">Spanish</option>
+					  <option value="../data/languages/lv-03-german.md">German</option>
+					  <option value="../data/languages/lv-04-russian.md">Russian</option>
+					  <option value="../data/languages/lv-05-chinese.md" default>Chinese</option>
+					  <option value="../data/languages/lv-06-japanese.md">Japanese</option>
+          </optgroup>
+          <optgroup label="Ancient Languages">
+					  <option value="../data/languages/la-01-latin.md" default>Latin</option>
+					  <option value="../data/languages/la-02-greek.md" default>Greek</option>
+          </optgroup>
+          <!--
+          <optgroup label="Writing Systems">
+            <option value="../data/writing_systems/kana.md">Kana</option>
+          </optgroup>
+          -->
+				</select>
+        <br>
+        <input type="file" id="quizFileInput" multiple>
+	<p id="selectedFileFeedback"></p>
+            </div>
+            <div>
+                <label for="quizTypeSelect">Quiz Type:</label>
+                <select id="quizTypeSelect">
+                    <option value="normal">Normal</option>
+                    <option value="script">Script</option>
+                    <option value="dev">Dev</option>
+                </select>
+            </div>
+            <input type="number" id="questionCount" placeholder="Number of Questions">
+            <div id="syllableLength" hidden>
+              <label for="syllableLength">Number of Syllables: </label>
+              <input type="number" id="syllableLength" value="2">
+            </div>
+            <div class="checkbox-options">
+              <h1>General</h1>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="randomizeCheckbox" checked>
+                    <label for="randomizeCheckbox">Randomize</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="smartModeCheckbox" checked>
+                    <label for="smartModeCheckbox">Smart</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="reverseCheckbox">
+                    <label for="reverseCheckbox">Reverse</label>
+                </div>
+                <input type="text" id="filterList" placeholder="Enter filters here">
+        				<section id="quizFiltersArea"></section>
+                <h1>Languages</h1>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="wordsOnlyCheckbox">
+                    <label for="randomizeCheckbox">Words only</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="sentencesOnlyCheckbox">
+                    <label for="randomizeCheckbox">Sentences only</label>
+                </div>
+            </div>
+            <button id="quizStartBtn" onclick="collapseDetails()">Start</button>
+        </details>
+    </main>
+</body>
+</html>
+
+<script>
+    function collapseDetails() {
+        const details = document.getElementById('quizControls');
+        details.open = false;
+    }
+</script>
